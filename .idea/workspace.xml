@@ -31,8 +31,18 @@
       <file leaf-file-name="catalog.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ch2_razmetka/lesson/barbeshop/catalog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="146" column="25" lean-forward="true" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+            <state relative-caret-position="535">
+              <caret line="50" column="29" lean-forward="false" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="catalog-item.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch2_razmetka/lesson/barbeshop/catalog-item.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -60,6 +70,7 @@
         <option value="$PROJECT_DIR$/ch1_introductory/courses/6_znakomstvo_s_HTML5/index.html" />
         <option value="$PROJECT_DIR$/ch2_razmetka/lesson/barbeshop/Index.html" />
         <option value="$PROJECT_DIR$/ch2_razmetka/lesson/barbeshop/catalog.html" />
+        <option value="$PROJECT_DIR$/ch2_razmetka/lesson/barbeshop/catalog-item.html" />
       </list>
     </option>
   </component>
@@ -159,12 +170,12 @@
       <workItem from="1529650671820" duration="5667000" />
       <workItem from="1529680183857" duration="3193000" />
       <workItem from="1529693544706" duration="2031000" />
-      <workItem from="1529742406755" duration="2769000" />
+      <workItem from="1529742406755" duration="5824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28259000" />
+    <option name="totallyTimeSpent" value="31314000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -417,10 +428,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ch2_razmetka/lesson/barbeshop/catalog-item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ch2_razmetka/lesson/barbeshop/catalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="146" column="25" lean-forward="true" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+        <state relative-caret-position="535">
+          <caret line="50" column="29" lean-forward="false" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
           <folding />
         </state>
       </provider>

@@ -120,7 +120,22 @@
 	<section class="modal modal-login">
 		<h2>Напишите нам</h2>
 		<!--   ТУТ БУДЕТ ФОРМА          -->
-		<button type="submit"></button>
+		<form action="https://echo.htmlacademy.ru" method="post">
+			<p>
+				<label for="name">Ваше имя:</label>
+				<input type="text" name="name" id="name" placeholder="Представтесь,пожалуста">
+			</p>
+			<p>
+				<label for="email">Ваш email:</label>
+				<input type="email" name="email" id="email" placeholder="Для отправки ответа">
+			</p>
+			<p>
+				<label for="textarea">Текст письма:</label>
+				<textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+			</p>
+			<button type="submit" class="button">Отправить</button>
+		</form>
+		<button type="button" class="modal-close">Закрыть</button>
 	</section>
 </body>
 </html>

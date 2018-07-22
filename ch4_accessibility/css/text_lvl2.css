@@ -1,0 +1,17 @@
+span{
+    font-size: 60px;
+    text-shadow: 30px 30px 1px #111;
+}
+h1{
+    margin: 30px;
+    font-size: 100px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 1px #1e181c,
+                2px 2px 1px #52424d;
+}
+h2{
+    font-size: 55px;
+    text-shadow:  4px 4px 0 rgba(0,0,0,.2),
+                  2px 2px 0 #e5d4c0;
+}

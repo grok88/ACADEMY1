@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Доступность: попадание в фокус</title>
+	<link rel="stylesheet" href="href">
+	<style>
+		body{
+			padding:80px 100px;
+			font-family:sans-serif;
+		}
+		.button{
+			display: inline-block;
+			margin: 20px;
+			padding:10px 20px;
+			border-radius: 40px;
+			background: linear-gradient(white,lightgray);
+			color:#585a5e;
+			font:inherit;
+			border:3px solid #afafaf; ;
+		}
+		.button:focus{
+			outline: none;
+			box-shadow:  0 0 0 3px #fff,
+						 0 0 0 6px #2f7cc0;
+		}
+		.button:active{
+			border-color: #4777a6;
+			color:#fff;
+			background: #4e87c0;
+		}
+	</style>
+</head>
+<body>
+	<button class="button">Кнопка 1</button>
+	<div class="button" tabindex="0">Кнопка 2</div>
+</body>
+</html>

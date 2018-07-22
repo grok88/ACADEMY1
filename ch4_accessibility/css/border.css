@@ -1,0 +1,88 @@
+body{
+    background-color: rgba(132, 145, 8, 0.7);
+}
+[class^="arrow"]{
+    margin: 30px;
+    width: 0;
+    height: 0;
+    border:100px solid #fff;
+}
+.portrait{
+    box-sizing:border-box;
+    margin: 50px;
+    padding: 10px;
+    width: 270px;
+    height: 270px;
+    outline: 10px solid white;
+    background-image: url("../img/girl_cat.jpg");
+    background-size:cover;
+    background-clip:content-box;
+    background-origin:content-box;
+    border:50px solid rgba(145, 111, 120, 0.7);
+    border-image-source:url("../img/cat.jpg");
+    border-image-slice:90;
+    border-image-repeat:round;
+    border-image-outset:0;
+}
+.square{
+    width: 0;
+    height: 0;
+    background: #aaa;
+    border:100px solid #fff;
+    border-left-color: #0074d9;
+    border-right-color: #2ecc40;
+    border-top-color: #ff4136;
+    border-bottom-color: #ffdc00;
+}
+.arrow-bottom{
+    border-top-color:#0074d9;
+    border-bottom-width:0;
+    border-right-color:transparent;
+    border-left-color:transparent;
+}
+.arrow-right{
+    border-top-color: #0074d9;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-left-color:transparent;
+}
+.long-right{
+    position: relative;
+    margin: 350px auto;
+    width: 200px;
+    height: 30px;
+    background: #0074d9;
+}
+.long-right::after{
+    position: absolute;
+    content: '';
+    border:40px solid #fff;
+    border-right-width:0 ;
+    border-left-color:#0074d9;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    top: -25px;
+    right: -40px;
+
+}
+.arr{
+    display: inline-block;
+    margin:  0 10px;
+    font-size: 0;
+    outline: 1px solid red;
+}
+.arr::before{
+    content: "";
+    border:20px solid #0074d9;
+    border-left-width: 10px;
+    border-right-width:10px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    display: inline-block;
+}
+.arr-up::before{
+    border-bottom-width: 0;
+}
+.arr-down::before{
+    border-top-width: 0;
+}

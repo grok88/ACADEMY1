@@ -1,0 +1,45 @@
+body{
+    background-color: burlywood;
+}
+.portrait{
+    box-sizing: border-box;
+    width: 300px;
+    height: 400px;
+    background: #fff url(../img/girl_cat.jpg) no-repeat;
+    margin:20px;
+    background-size: 100% 100%;
+
+}
+.img{
+    border:20px solid rgba(255, 191, 162, 0.5);
+    background-size:100% 100% ;
+    padding: 20px;
+    float: left;
+    background-origin:border-box;
+}
+.img1,.img2,.img3{
+    border:20px solid rgba(255, 191, 162, 0.5);
+    background-size:100% 100% ;
+    padding: 20px;
+    float: left;
+}
+.img1{
+    background-origin: content-box ;
+    outline: 10px solid red;
+    outline-offset: 10px;
+}
+.img2{
+   background-origin:padding-box;
+}
+.img3{
+    background-origin:border-box;
+}
+.clip1{
+    background-clip:content-box;
+}
+.clip2{
+    background-clip:border-box;
+}
+.clip3{
+    background-clip:padding-box;
+}

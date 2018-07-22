@@ -1,0 +1,48 @@
+.class1.class2{
+    color: navajowhite;
+    background-color: darkorchid;
+}
+
+.list1 li:not(:last-child){
+    font-size: 30px;
+}
+.list1 li:not(:first-child):not(last-child){
+    font-weight: bold;
+}
+.list1 li:nth-last-child(2){
+    font-style: italic;
+}
+/**
+ul:first-child {
+    text-transform: uppercase;
+}
+ul:first-of-type{
+    text-transform: uppercase;
+}
+*/
+.queen + li{
+    background: #ffff99;
+}
+.king ~ li{
+    background: #99ddff;
+}
+.cards{
+    position: relative;
+    width: 160px;
+    height: 240px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 5px;
+    outline: 1px solid red;
+}
+.cards::before{
+    content: "A";
+    font-size: 30px;
+    color: #e50000;
+    position: absolute;
+    top:5px;
+    left:5px;
+    padding-bottom: 20px;
+
+}

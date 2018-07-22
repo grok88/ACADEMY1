@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>СТРЕЛКИ</title>
+	<link rel="stylesheet" href="href">
+	<style>
+		.link{
+			margin:0;
+			display: inline-block;
+			outline:1px solid red;
+			font-size: 0;
+		}
+		.link::before{
+			content: '';
+			border:20px solid red;
+			border-left-width: 10px;
+			border-right-width: 10px;
+			border-left-color: transparent;
+			border-right-color: transparent;
+			display: inline-block;
+		}
+		.top::before{
+			border-bottom-width: 0;
+		}
+		.bottom::before{
+			border-top-width: 0;
+		}
+		[class^="link-"]{
+			display: inline-block;
+			outline:1px solid darkred;
+			margin: 0;
+			font-size: 0;
+		}
+		[class^="link-"]::before{
+			content: '';
+			border:16px solid orange;
+			border-top-width: 8px;
+			border-bottom-width: 8px;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+			display: inline-block;
+		}
+		.link-left::before{
+			border-left-width: 0;
+		}
+		.link-right::before{
+			border-right-width: 0;
+		}
+	</style>
+</head>
+<body>
+<a href="http://tut.by" class="link top" target="_blank">tut.by</a>
+<a href="http://onliner.by" class="link bottom" target="_blank">onliner.by</a>
+<a href="#">ahahha</a>
+<hr>
+<a href="#" class="link-left">left</a>
+<a href="#" class="link-right">left</a>
+&#9787;
+</body>
+</html>

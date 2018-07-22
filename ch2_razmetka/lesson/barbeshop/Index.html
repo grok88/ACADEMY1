@@ -4,10 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Барбешоп Бородинский</title>
 	<link rel="stylesheet" href="href">
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 	<!-- HEADER -->
-	<header class="main-header">
+	<hetader class="main-header">
 		<nav class="main-nav"  >
 			<a class="main-header-logo">
 				<img src="img/main-logo.svg" alt="Логотип Барбешопа" width="371" height="155">
@@ -24,7 +25,7 @@
 					<a href="login.html" class="login-link" title="Форма входа">Вход</a></li>
 			</ul>
 		</nav>
-	</header>
+	</hetader>
 	<!-- MAIN -->
 	<main class="container">
 
@@ -48,31 +49,33 @@
 			</ul>
 		</section>
 
-		<section class="news">
-			<h2 class="">Новости</h2>
-			<ul class="news-list">
-				<li class="news-item">
-					<p>Нам наконец завезли ягермастер!теперь вы можете пропустить стаканчик во время стрижки</p>
-					<time datetime="2018-01-11">11 января</time>
-				</li>
-				<li class="news-item">
-					<p>В нашей команде пополнение, Борис <q>Бритва</q> Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды</p>
-					<time datetime="2018-01-18"> 18 января</time>
-				</li>
-			</ul>
-			<a href="news.html" class="button"> Все новости</a>
-		</section>
+		<div class="index-columns">
+			<section class="news">
+				<h2 class="">Новости</h2>
+				<ul class="news-list">
+					<li class="news-item">
+						<p>Нам наконец завезли ягермастер!теперь вы можете пропустить стаканчик во время стрижки</p>
+						<time datetime="2018-01-11">11 января</time>
+					</li>
+					<li class="news-item">
+						<p>В нашей команде пополнение, Борис <q>Бритва</q> Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды</p>
+						<time datetime="2018-01-18"> 18 января</time>
+					</li>
+				</ul>
+				<a href="news.html" class="button"> Все новости</a>
+			</section>
 
-		<section class="gallery">
-			<h2>Фотогалерея</h2>
-			<figure class="gallery-content">
-				<a href="#">
-					<img src="img/image.jpg" alt="Интерьер" width="286" heoght="164">
-				</a>
-				<button type="button" class="button gallery-button gallery-button-back">Вперед</button>
-				<button type="button" class="button gallery-button gallery-button-next">назад</button>
-			</figure>
-		</section>
+			<section class="gallery">
+				<h2>Фотогалерея</h2>
+				<figure class="gallery-content">
+					<a href="#">
+						<img src="img/image.jpg" alt="Интерьер" width="286" heoght="164">
+					</a>
+					<button type="button" class="button gallery-button gallery-button-back">Вперед</button>
+					<button type="button" class="button gallery-button gallery-button-next">назад</button>
+				</figure>
+			</section>
+		</div>
 
 		<section class="contacts">
 			<h2>Контактная информация</h2>

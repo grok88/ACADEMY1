@@ -30,6 +30,121 @@ body{
 a{
     text-decoration: none;
 }
+.button{
+    font:inherit;
+
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #000000;
+
+    border:none;
+}
+.button:hover,
+.button:active,
+.button:focus{
+    background-color: #663d15;
+}
+
+/* Задаем общие стили для страницы INNER-PAGE*/
+.inner-page{
+    color:#000000;
+    background:#f8f5f2 url("../img/section-fon.jpg") 0 0;
+}
+.content h1{
+    font-size: 30px;
+    line-height: 42px;
+}
+.breadcrumbs{
+    list-style:none;
+}
+.breadcrumbs a{
+    color:#000000;
+}
+.breadcrumbs a:hover,
+.breadcrumbs a:focus{
+    text-decoration: underline;
+}
+.breadcrumbs-current{
+    color:#aba9a7;
+}
+.filters-form fieldset{
+    border:none;
+}
+.filters-form legend{
+    font-size: 24px;
+    left: 30px;
+}
+.filters-form p{
+    line-height: 18px;
+}
+.filter-input:hover + label,
+.filter-input:focus + label{
+    color:#663d15;
+}
+.filter-input:disabled + label {
+    color: #000000;
+
+    opacity: .5;
+}
+.catalog-list{
+    list-style:none;
+}
+.catalog-item{
+    background-color: #f8f8f8;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+.catalog-item:hover{
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+.catalog-item a {
+    color: #000000;
+}
+.catalog-item h3 {
+    font-size: 14px;
+    line-height: 18px;
+}
+.catalog-category{
+    text-transform: none;
+}
+.catalog-item-price b{
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+
+    background-color: #e5e5e5;
+}
+.catalog-item-price .button{
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 18px;
+}
+.pagination-list{
+    list-style:none;
+}
+.pagination-item{
+    color:#ffffff;
+    line-height: 18px;
+    
+    background-color: #000000;
+}
+.pagination-item a:hover,
+.pagination-item a:focus,
+.pagination-item a:active{
+    background-color: #663d15;
+}
+.pagination-item-current a{
+    color: #000000;
+
+    background-color: #ffffff;
+}
+.current a:focus,
+.current a:hover,
+.current a:active{
+    color: #000000;
+
+    background-color: #ffffff;
+}
 /* Задаем  стили для Header */
 .main-nav{
     font-size: 16px;
@@ -80,4 +195,109 @@ a{
 }
 .news-list time{
     text-transform: none;
+}
+/* Задаем  стили для section Contacts and Appointment */
+.appointment-item input{
+    font: inherit;
+
+    background-color: transparent;
+    border:2px solid #000101;
+}
+.appointment-item input:focus{
+    border-color:#663d15;
+}
+/* Задаем  стили для FOOTER */
+.main-footer{
+    color:#ffffff;
+
+    background-color: #232323;
+}
+
+.footer-contacts a{
+    color: #ffffff;
+    text-decoration: underline;
+}
+.footer-contacts a:hover,
+.footer-contacts a:focus{
+    text-decoration: none;
+}
+.social{
+    text-align: center;
+}
+.social-list{
+    list-style:none;
+}
+.social-item a{
+    color: #ffffff;
+}
+.footer-copyright .button:hover,
+.footer-copyright .button:focus{
+    color:#000000;
+
+    background-color: #ffffff;
+}
+/* Задаем  стили для MODAL  */
+.modal{
+    color: #000000;
+
+    background:#f8f5f2 url("../img/section-fon.jpg") 0 0 ;
+}
+/* Задаем  стили для MODAL FORM */
+.modal h2{
+    font-size: 30px;
+    line-height: 42px;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    font:inherit;
+    text-transform: uppercase;
+    color:red;
+
+    border:2px solid #000000;
+    background-color: transparent;
+}
+.login-form input:focus{
+    border-color:#663d15;
+}
+.login-checkbox:hover,
+.login-checkbox:focus{
+    color:#663d15;
+}
+.restore{
+    color: #000000;
+    text-decoration: underline;
+}
+.restore:focus,
+.restore:hover{
+    text-decoration: none;
+}
+
+/* Размечаем CATALOG_ITEm */
+.product-photos-preview{
+    list-style: none;
+}
+.product-photo-full{
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.5);
+}
+.product-photos-preview li{
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.5);
+}
+.product-article{
+    color:#aeaeae;
+    text-align: right;
+}
+.product-price b{
+    color: #000000;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+
+    background-color: #e5e5e5;
+}
+.product-info h3{
+    font-size: 24px;
+    line-height: 30px;
+}
+.product-info ul{
+    list-style: none;
 }

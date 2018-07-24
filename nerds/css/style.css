@@ -1,0 +1,474 @@
+/* Подключаем локально шрифты */
+@font-face{
+    font-family: Roboto;
+    src: url("../fonts/roboto.woff2");
+    font-weight:400;
+}
+@font-face{
+    font-family: "Roboto";
+    src: url("../fonts/robotomedium.woff2");
+    font-weight: 500;
+}
+@font-face{
+    font-family: Roboto;
+    src: url("../fonts/robotobold.woff2");
+    font-weight: 700;
+}
+
+/* Общие стили для проекта */
+
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family:Roboto,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+
+    background-color: #ffffff;
+}
+a{
+    text-decoration: none;
+}
+.button{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+}
+.btn1{
+    background-color: #fb565a;
+}
+.btn1:hover,
+.btn1:focus{
+    background-color: #e74246;
+}
+.btn1:active{
+    color:rgba(255,255,255,.3);
+    background-color:#d7373b;
+}
+.btn2{
+    background-color: #00ca74;
+}
+.btn2:hover,
+.btn2:focus{
+    background-color: #00bc6c;
+}
+.btn2:active{
+    color:rgba(255,255,255,.3);
+    background-color: #00aa62;
+}
+.btn3{
+    background-color: #efc84a;
+}
+.btn3:hover,
+.btn3:focus{
+    background-color: #eab534;
+}
+.btn3:active{
+    color:rgba(255,255,255,.3);
+    background-color: #e5a722;
+}
+/*  стили для HEADER */
+.main-header{
+    background-color: #eeeeee;
+}
+.main-nav,
+.user-navigation{
+    list-style:none;
+}
+.main-nav a,
+.user-navigation a{
+    color: #000000;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.main-nav a:hover,
+.main-nav a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus{
+    color:#fb565a;
+}
+.main-nav a:active,
+.user-navigation a:active{
+    color:rgba(0,0,0,.3);
+}
+
+/*  стили для MAIN */
+/*  стили для SLIDER */
+.slider-list{
+    list-style:none;
+}
+.slider-item b{
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+    color: #000000;
+}
+.slider-item p{
+    color:#283136;
+}
+
+/*  стили для SERVICE */
+.service-list{
+    list-style:none;
+}
+.service-item h3{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+/*  стили для ABOUT */
+/*  стили для ABOUT-US */
+.about-us b{
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+    color: #000000;
+}
+.about-us p{
+    color:#283136;
+}
+.about-us h4{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color:#283136;
+}
+.about-us-list{
+    list-style: none;
+}
+.about-us-list li{
+    color:#283136;
+}
+
+/*  стили для STATISTIC */
+.statistic-table caption{
+    font-size: 16px;
+    line-height:24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.statistic-table th{
+    font-size: 45px;
+    font-weight: 700;
+    color: #000000;
+}
+.statistic-table td{
+    font:inherit;
+    color:#283136;
+}
+/*  стили для Partners */
+.partners-list-img{
+    opacity: .2;
+}
+.partners-list a:hover  img,
+.partners-list a:focus  img{
+    opacity: 1;
+}
+.partners-list a:active img{
+    opacity: .1;
+}
+/*  FOOTER  */
+/*  стили для CONTACT */
+.contact{
+    color:#666666;
+
+    background-color: #ffffff;
+}
+.contact h2{
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000000;
+}
+/*  стили для SOCIAL */
+.social-list{
+    list-style:none;
+}
+.social b{
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+}
+.social p{
+    font-size: 16px;
+    line-height: 22px;
+    color:#444444;
+}
+
+
+/*  MODAL  */
+/*  MODAL-LOGIN  */
+.modal h2{
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+}
+
+.modal-form label{
+    font-weight: 700;
+}
+.modal-form input[type="text"],
+.modal-form input[type="email"],
+.modal-form textarea{
+    font:inherit;
+    color:rgba(68,68,68,.5);
+
+    background-color: transparent;
+    border:2px solid #d7dcde;
+}
+.modal-form input:hover,
+textarea:hover{
+    color: rgba(68,68,68,.5);
+    border-color:#b4b9bb;
+}
+.modal-form input:focus,
+textarea:focus{
+    border-color: #000000;
+}
+
+/*СТИЛИ ДЛЯ СТРАНИЦЫ CATALOG.html*/
+.content h1{
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+    color: #000000;
+
+    background-color: #eeeeee;
+}
+
+/*СТИЛИ ДЛЯ ФОРМЫ SORT_FORM*/
+.sort-form fieldset{
+    border: none;
+}
+.sort-form legend{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: left;
+}
+.form-price label{
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color:#283136;
+}
+.form-price input{
+    background-color: #eeeeee;
+    border:none;
+}
+.form-grid label{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color:#283136;
+}
+.form-grid input:hover + label,
+.form-grid input:focus + label {
+    color: #000000;
+}
+.form-grid input:disabled + label{
+    color:rgba(0,0,0,.3);
+}
+
+/*СТИЛИ ДЛЯ ФОРМЫ  input type="RADIO" */
+input[type="radio"]{
+    display: none;
+}
+input[type="radio"] + span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    opacity: .4;
+    background: url("../img/radio-off.svg") no-repeat left top;
+}
+input[type="radio"] + span:hover{
+    opacity: 1;
+}
+input[type="radio"]:checked + span{
+    background: url("../img/radio-on.svg") no-repeat left top;
+}
+input[type="radio"]:checked + span:hover{
+    opacity: 1;
+}
+input[type="radio"]:disabled + span{
+    opacity: .1;
+}
+/*СТИЛИ ДЛЯ ФОРМЫ  input type="Checkbox" */
+/* 1--- Убираем дефолтные чекбоксы */
+input[type="checkbox"]{
+    display: none;
+}
+/* 2--- Прописываем в HTML span и стилизуем его --- Пустой чекбох */
+input[type="checkbox"] + span{
+    display: inline-block;
+    width: 27px;
+    height: 23px;
+    background:url("../img/checkbox-off.svg") no-repeat left top;
+    opacity: .4;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+/* 3--- При наведении на спан меняем прозрачность */
+input[type="checkbox"] + span:hover{
+    opacity:1;
+}
+/* 4--- При выборе - меняем картинку на отмеченый чекбох */
+input[type="checkbox"]:checked + span{
+    background:url("../img/checkbox-on.svg") no-repeat left top;
+}
+input[type="checkbox"]:checked + span:hover{
+    opacity: 1;
+}
+input[type="checkbox"]:disabled + span{
+    opacity: .1;
+}
+input[type="checkbox"]:disabled ~ label{
+    opacity: .3;
+}
+
+/*СТИЛИ ДЛЯ ФОРМЫ: button  type="submit" */
+.sort-button{
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000000;
+
+    border:none;
+    background-color: #eeeeee;
+}
+.sort-button:hover,
+.sort-button:focus{
+    background-color: #dfdfdf;
+}
+.sort-button:active{
+    border-top:3px solid rgba(0,0,0,.1);
+    opacity:.3;
+    background-color: #d5d5d5;
+}
+
+/*СТИЛИ ДЛЯ SECTION: class="catalog" */
+.catalog b{
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+}
+.catalog-sort{
+    list-style:none;
+}
+.catalog-sort-button{
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color:rgba(0,0,0,.3);
+}
+.catalog-sort-button:hover,
+.catalog-sort-button:focus{
+    color:rgba(0,0,0,.6);
+}
+.catalog-sort .current,
+.catalog-sort-button:active{
+    color: #000000;
+}
+.catalog-order{
+    list-style:none;
+}
+.catalog-order li{
+    display: inline-block;
+}
+.catalog-order img{
+    opacity: .3;
+}
+a[class^="sort"]:hover img,
+a[class^="sort"]:focus img{
+    opacity: .6;
+}
+a[class^="sort"]:active img{
+    opacity: 1;
+}
+
+/*СТИЛИ ДЛЯ UL: class="catalog-list" */
+.catalog-list{
+    list-style:none;
+}
+.catalog-item-info{
+    background-color: #eeeeee;
+}
+.catalog-item-info h3{
+    text-align: center;
+}
+.catalog-list-link {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+}
+.catalog-item-info p{
+    font-size:16px;
+    line-height: 18px;
+    font-weight: 400;
+    color:#666666;
+    text-align: center;
+}
+.catalog-list-button{
+    background-color: #fb565a;
+}
+.catalog-list-button:hover,
+.catalog-list-button:focus{
+    background-color: #e74246;
+}
+.catalog-list-button:active{
+    background-color: #d7373b;
+}
+/*СТИЛИ ДЛЯ UL: class="pagination-list" */
+.pagination-list{
+    list-style:none;
+}
+.pagination-item{
+    padding: 10px;
+    display: inline-block;
+}
+.pagination-item a{
+    color: #000000;
+    padding: 10px;
+
+
+    background-color: #eeeeee;
+}
+.pagination-item a:hover,
+.pagination-item a:focus{
+    background-color: #dfdfdf;
+}
+.pagination-item a:active{
+    background-color: #d5d5d5;
+    color:rgba(0,0,0,.3);
+}
+.pagination-item .pagination-current{
+    background-color: #ffffff;
+
+    border:3px solid #dbdbdb;
+}
+
+.catalog-item:hover{
+    border:1px solid rgba(77,77,77,.1);
+    display: inline-block;
+    box-shadow: 6px 6px 15px 0 rgba(0,0,0,.25),
+                -6px -6px 15px 0 rgba(0,0,0,.25);
+}

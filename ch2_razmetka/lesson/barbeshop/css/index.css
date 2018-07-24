@@ -78,11 +78,47 @@ a{
 .filters-form p{
     line-height: 18px;
 }
-.filter-input:hover + label,
-.filter-input:focus + label{
+/*
+
+
+*/
+.filters-form input[type="radio"],
+.filters-form input[type="checkbox"] {
+    display: none;
+}
+/*ДЛЯ РАДИО*/
+.filters-form input[type="radio"] + span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background:url("../img/radio-off.png") left top;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+.filters-form input[type="radio"]:checked + span{
+    background:url("../img/radio-on.png") left top;
+}
+
+.filter-input:hover ~ label,
+.filter-input:focus ~ label{
     color:#663d15;
 }
-.filter-input:disabled + label {
+/*ДЛЯ чекбокса*/
+.filters-form input[type="checkbox"]+ span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border:2px solid #000000;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+.filters-form input[type="checkbox"]:checked+ span{
+    background:url("../img/cross.svg") no-repeat 50% 50%;
+
+}
+.filter-input:disabled ~ label,
+.filter-input:disabled + span{
     color: #000000;
 
     opacity: .5;

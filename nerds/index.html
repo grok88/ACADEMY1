@@ -3,28 +3,50 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Nerds</title>
-	<link rel="stylesheet" href="css/">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="main-header">
 		<nav class="main-nav">
-			<img src="img/nerds-logo.svg" alt="Логотип" class="main-logo" width="160" height="65">
+			<img src="img/nerds-logo.svg" alt="Логотип" class="main-logo" width="160" height="65" class="main-logo">
 			<ul class="main-nav">
 				<li><a href="#">Студия</a></li>
 				<li><a href="#">Клиенты</a></li>
 				<li><a href="catalog.html">Магазин</a></li>
 				<li><a href="#">Контакты</a></li>
 			</ul>
-
-			<a href="#">Корзина</a>
-
+			<ul class="user-navigation">
+				<li><a href="#">Корзина</a></li>
+			</ul>
 		</nav>
 	</header>
 
 	<main class="content">
-		<h1 class="visually-hidden"> Дизайн-сиудия Nerds</h1>
+		<h1 class="visually-hidden"> Дизайн-студия Nerds</h1>
 		<section class="info">
 			<h2 class="visually-hidden">Информация</h2>
+			<ul class="slider-list">
+				<li class="slider-item">
+					<b>Долго, дорого, <br> скрупулезно.</b>
+					<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+					<a href="#" class="button btn1" title="Узнать больше">Узнать больше</a>
+				</li>
+				<li class="slider-item">
+					<b>Любим математику  <br> как никто другой</b>
+					<p>Никакого креатива, только математические формулы
+						для расчета идеальных пропорций.</p>
+					<a href="#" class="button btn1" title="Узнать больше">Узнать больше</a>
+				</li>
+				<li class="slider-item">
+					<b>Только ночь,<br>
+						только хардкор</b>
+					<p>Работать днем, как все? Мы против этого.
+						Ближе к полуночи работа только начинается..</p>
+					<a href="#" class="button btn1" title="Узнать больше">Узнать больше</a>
+				</li>
+			</ul>
+
 			<!--     Тут будет слайдер             -->
 		</section>
 		<section class="service">
@@ -34,20 +56,20 @@
 					<img src="img/illustration-1.png" alt="Веб-сайты" width="300" height="146">
 					<h3>Веб-сайты</h3>
 					<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-					<a href="#" title="" class="button">Заказать</a>
+					<a href="#" title="" class="button btn1">Заказать</a>
 				</li>
 				<li class="service-item">
 					<img src="img/illustration-2.png" alt="Веб-сайты" width="300" height="146">
 					<h3>Приложения</h3>
 					<p>Покорите топ-10 приложений в AppStore и Google Play</p>
-					<a href="#" title="" class="button">Заказать</a>
+					<a href="#" title="" class="button btn2">Заказать</a>
 				</li>
 				<li class="service-item">
 					<img src="img/illustration-3.png" alt="Веб-сайты" width="300" height="146">
 					<h3>Презинтации</h3>
 					<p>Вы даже не подозреваете,
 						насколько вы изумительны!</p>
-					<a href="#" title="" class="button">Заказать</a>
+					<a href="#" title="" class="button btn3">Заказать</a>
 				</li>
 			</ul>
 		</section>
@@ -69,7 +91,7 @@
 			<section class="statistic">
 				<h2 class="visually-hidden">Статистика</h2>
 				<img src="img/nerds-illustration.png" alt="Нердс иллюстрация" width="360" height="208" >
-				<table>
+				<table class="statistic-table">
 					<caption>с 2004 года Любим точность во всем:</caption>
 					<tr>
 						<th>146 <sup>%</sup></th>
@@ -87,10 +109,10 @@
 		<section class="partners">
 			<h2 class="visually-hidden">Наши партнеры</h2>
 			<ul class="partners-list">
-				<li><a href="#"><img src="img/logo-1.png" alt="Html Academy" width="199" height="68"></a></li>
-				<li><a href="#"><img src="img/logo-2.png" alt="Borodinski" width="209" height="90"></a></li>
-				<li><a href="#"><img src="img/logo-3.png" alt="Pink" width="185" height="52"></a></li>
-				<li><a href="#"><img src="img/logo-4.png" alt="Mishka" width="173" height="84"></a></li>
+				<li><a href="#"><img src="img/logo-1.png" alt="Html Academy" width="199" height="68"  class="partners-list-img"></a></li>
+				<li><a href="#"><img src="img/logo-2.png" alt="Borodinski" width="209" height="90" class="partners-list-img"></a></li>
+				<li><a href="#"><img src="img/logo-3.png" alt="Pink" width="185" height="52" class="partners-list-img"></a></li>
+				<li><a href="#"><img src="img/logo-4.png" alt="Mishka" width="173" height="84" class="partners-list-img"></a></li>
 			</ul>
 		</section>
 	</main>
@@ -104,7 +126,7 @@
 				ул. Б. Конюшенная, д. 19/8
 			</p>
 			<p>тел. +7 (812) 275-75-75</p>
-			<a href="#" title="Напишите нам">Напишите нам</a>
+			<a href="#" title="Напишите нам" class="button btn1">Напишите нам</a>
 		</section>
 		<section class="social">
 			<h2 class="visually-hidden">Социальные сети</h2>
@@ -120,7 +142,7 @@
 	<section class="modal modal-login">
 		<h2>Напишите нам</h2>
 		<!--   ТУТ БУДЕТ ФОРМА          -->
-		<form action="https://echo.htmlacademy.ru" method="post">
+		<form action="https://echo.htmlacademy.ru" method="post" class="modal-form">
 			<p>
 				<label for="name">Ваше имя:</label>
 				<input type="text" name="name" id="name" placeholder="Представтесь,пожалуста">
@@ -133,7 +155,7 @@
 				<label for="textarea">Текст письма:</label>
 				<textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="В свободной форме"></textarea>
 			</p>
-			<button type="submit" class="button">Отправить</button>
+			<button type="submit" class="button btn1">Отправить</button>
 		</form>
 		<button type="button" class="modal-close">Закрыть</button>
 	</section>

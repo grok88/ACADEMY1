@@ -24,7 +24,7 @@ body{
     text-transform: uppercase;
     color:#ffffff;
 
-    background-color: #000000;
+    background: #000 url("../img/main-background.png") no-repeat;
 }
 
 a{
@@ -40,6 +40,16 @@ a{
 
     border:none;
 }
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip:rect(0,0,0,0);
+    overflow: hidden;
+}
 .button:hover,
 .button:active,
 .button:focus{
@@ -51,12 +61,34 @@ a{
     color:#000000;
     background:#f8f5f2 url("../img/section-fon.jpg") 0 0;
 }
-.content h1{
+.inner-page .main-header{
+    background-color: #000000;
+    margin-bottom: 60px;
+}
+
+.inner-page .main-nav{
+    flex-direction:row;
+    align-items: flex-start;
+
+}
+.inner-page .main-header-logo{
+    order:0;
+    width: 111px;
+    height: 24px;
+    padding: 23px 20px;
+}
+.inner-page .user-navigation{
+    margin-left: auto;
+}
+.page-title{
     font-size: 30px;
     line-height: 42px;
+    margin-bottom: 15px;
 }
 .breadcrumbs{
     list-style:none;
+    margin: 0;
+    padding: 0;
 }
 .breadcrumbs a{
     color:#000000;
@@ -67,6 +99,14 @@ a{
 }
 .breadcrumbs-current{
     color:#aba9a7;
+}
+.catalog-columns{
+    display: flex;
+    justify-content: space-between;
+}
+.filters{
+    width: 220px;
+    outline: 1px solid red;
 }
 .filters-form fieldset{
     border:none;
@@ -123,12 +163,28 @@ a{
 
     opacity: .5;
 }
+.catalog{
+    width: 700px;
+    outline: 1px solid red;
+}
 .catalog-list{
     list-style:none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
 }
 .catalog-item{
     background-color: #f8f8f8;
     box-shadow:0 0 10px rgba(0,0,0,.1);
+    width: 220px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    outline: 1px solid red;
+}
+.catalog-item:nth-child(3n){
+    margin-right: 0;
 }
 .catalog-item:hover{
     box-shadow:0 0 10px rgba(0,0,0,.2);
@@ -157,6 +213,9 @@ a{
 }
 .pagination-list{
     list-style:none;
+    margin: 0;
+    padding: 0;
+
 }
 .pagination-item{
     color:#ffffff;
@@ -174,6 +233,9 @@ a{
 
     background-color: #ffffff;
 }
+.inner-page .main-footer{
+    margin-top: 45px;
+}
 .current a:focus,
 .current a:hover,
 .current a:active{
@@ -187,16 +249,59 @@ a{
     line-height: 20px;
     color: #ffffff;
 
-
-    background: #000 url("../img/main-background.png") no-repeat;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    outline:1px solid red;
+    margin-bottom: 65px;
 }
+
+.main-header-logo{
+    outline:1px solid red;
+    order:2;
+
+    width: 371px;
+    height: 155px;
+}
+
 .site-navigation,
 .user-navigation{
     list-style:none;
+    outline:1px solid red;
+}
+.site-navigation{
+    width:540px;
+    margin: 0;
+    padding: 0;
+
+}
+.user-navigation{
+    width: 140px;
+    margin: 0;
+    padding: 0;
 }
 .site-navigation a,
 .user-navigation a{
     color:#ffffff;
+}
+.main-navigation-wrapper{
+    width: 100%;
+    margin-bottom: 60px;
+    background-color: #000000;
+    outline:1px solid red;
+}
+.main-navigation-wrapper .container{
+    display: flex;
+    justify-content: space-between;
+
+}
+ .container{
+    width: 940px;
+    padding:0 10px;
+    margin: auto;
+
+
+    outline:1px solid red;
 }
 .site-navigation a:hover,
 .site-navigation a:focus,
@@ -206,10 +311,21 @@ a{
 }
 /* Задаем  стили для Body */
 /* Задаем  стили для section Features */
+.features{
+    margin-bottom: 80px;
+}
 .features-list{
     list-style:none;
     text-align:center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
 
+}
+.features-item{
+    width: 300px;
+    outline:1px solid red;
 }
 .features-item h3{
     font-size: 30px;
@@ -218,13 +334,26 @@ a{
 
 /* Задаем  стили для section News and Gallery */
 .index-columns{
+    display: flex;
+    justify-content: space-between;
     color:#000000;
 
     background:#f8f5f2 url("../img/section-fon.jpg") 0 0 ;
+    padding:50px 80px;
+    margin-bottom: 35px;
+    outline:1px solid red;
 }
 .index-columns h2{
     font-size: 30px;
     left: 42px;
+}
+.news,.contacts{
+    width: 380px;
+    outline:1px solid red;
+}
+.gallery,.appointment{
+    width: 300px;
+    outline:1px solid red;
 }
 .news-list{
     list-style:none;
@@ -244,11 +373,21 @@ a{
 }
 /* Задаем  стили для FOOTER */
 .main-footer{
+    margin-top: 65px;
+    padding:65px 0;
     color:#ffffff;
 
     background-color: #232323;
 }
-
+.main-footer .container{
+    display: flex;
+}
+.footer-contacts{
+    width: 320px;
+    outline:1px solid red;
+    margin: 0;
+    margin-right: 80px;
+}
 .footer-contacts a{
     color: #ffffff;
     text-decoration: underline;
@@ -258,13 +397,22 @@ a{
     text-decoration: none;
 }
 .social{
+    width: 145px;
     text-align: center;
+    margin: 0;
+    outline:1px solid red;
 }
 .social-list{
     list-style:none;
 }
 .social-item a{
     color: #ffffff;
+}
+.footer-copyright{
+    width: 150px;
+    outline:1px solid red;
+    margin: 0;
+    margin-left: auto;
 }
 .footer-copyright .button:hover,
 .footer-copyright .button:focus{
@@ -309,6 +457,9 @@ a{
 }
 
 /* Размечаем CATALOG_ITEm */
+.product-photos{
+    width: 460px;
+}
 .product-photos-preview{
     list-style: none;
 }
@@ -330,10 +481,41 @@ a{
 
     background-color: #e5e5e5;
 }
+.product-info{
+    width: 390px;
+}
 .product-info h3{
     font-size: 24px;
     line-height: 30px;
 }
 .product-info ul{
     list-style: none;
+}
+
+
+/* Задаем общие стили для страницы PRICE.HTML*/
+.about-us b{
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+.about-us h2{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+}
+.about-us-product{
+    width: 300px;
+    outline: 1px solid red;
+}
+.about-us-list {
+    list-style: none;
+}
+.masters-price{
+    width: 460px;
+    outline: 1px solid red;
 }

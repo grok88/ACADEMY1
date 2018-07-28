@@ -39,6 +39,22 @@ a{
     text-transform: uppercase;
     text-align: center;
 }
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip:rect(0,0,0,0);
+    overflow: hidden;
+}
+.container{
+    width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    outline: 1px solid red;
+}
 .btn1{
     background-color: #fb565a;
 }
@@ -75,12 +91,34 @@ a{
 /*  стили для HEADER */
 .main-header{
     background-color: #eeeeee;
+
 }
-.main-nav,
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+}
+.main-logo{
+    width: 160px;
+    outline: 1px solid red;
+}
+.main-nav-menu{
+    width: 440px;
+    outline: 1px solid red;
+    margin: 0;
+    padding: 0;
+}
+.user-navigation{
+    width: 160px;
+    margin: 0;
+    padding: 0;
+    outline: 1px solid red;
+}
+.main-nav-menu,
 .user-navigation{
     list-style:none;
 }
-.main-nav a,
+.main-nav-menu a,
 .user-navigation a{
     color: #000000;
     font-size: 16px;
@@ -88,21 +126,40 @@ a{
     font-weight: 500;
     text-transform: uppercase;
 }
-.main-nav a:hover,
-.main-nav a:focus,
+.main-nav-menu a:hover,
+.main-nav-menu a:focus,
 .user-navigation a:hover,
 .user-navigation a:focus{
     color:#fb565a;
 }
-.main-nav a:active,
+.main-nav-menu a:active,
 .user-navigation a:active{
     color:rgba(0,0,0,.3);
 }
 
 /*  стили для MAIN */
 /*  стили для SLIDER */
+.content{
+    outline:1px solid red;
+}
+.info{
+    background-color: #eeeeee;
+}
+.info .container{
+    padding: 0;
+}
 .slider-list{
     list-style:none;
+    margin: 0;
+    padding: 0;
+    outline: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.slider-item{
+    outline: 1px solid red;
+    flex-grow: 1;
 }
 .slider-item b{
     font-size: 55px;
@@ -113,11 +170,25 @@ a{
 .slider-item p{
     color:#283136;
 }
-
+hr{
+    margin: 0;
+    padding: 0;
+}
 /*  стили для SERVICE */
 .service-list{
+    display: flex;
+    justify-content: space-between;
     list-style:none;
+    margin: 0;
+    margin-bottom: 80px;
+    padding: 0;
+    outline:1px solid red;
 }
+.service-item{
+    width: 300px;
+    outline:1px solid red;
+}
+
 .service-item h3{
     font-size: 24px;
     line-height: 30px;
@@ -129,6 +200,18 @@ a{
 
 /*  стили для ABOUT */
 /*  стили для ABOUT-US */
+.about{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    outline:1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+.about-us{
+    width: 660px;
+    outline:1px solid red;
+    margin-top: 40px;
+}
 .about-us b{
     font-size: 45px;
     line-height: 45px;
@@ -153,6 +236,10 @@ a{
 }
 
 /*  стили для STATISTIC */
+.statistic{
+    width: 360px;
+    outline:1px solid red;
+}
 .statistic-table caption{
     font-size: 16px;
     line-height:24px;
@@ -169,6 +256,21 @@ a{
     color:#283136;
 }
 /*  стили для Partners */
+.partners{
+    margin:40px 0;
+}
+.partners-list{
+    display:flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    outline:1px solid red;
+}
+.partners-item{
+    width: 260px;
+    outline:1px solid red;
+}
 .partners-list-img{
     opacity: .2;
 }
@@ -181,6 +283,10 @@ a{
 }
 /*  FOOTER  */
 /*  стили для CONTACT */
+.main-footer{
+    margin-top: 80px;
+    outline:1px solid red;
+}
 .contact{
     color:#666666;
 
@@ -193,16 +299,29 @@ a{
     font-weight: 700;
     color: #000000;
 }
+
 /*  стили для SOCIAL */
-.social-list{
-    list-style:none;
+.social{
+    display: flex;
 }
-.social b{
+.social-list{
+    margin:0;
+    margin-right: 140px;
+    padding: 0;
+    width: 260px;
+    list-style:none;
+    outline:1px solid red;
+}
+.social-columns{
+    outline:1px solid red;
+    width: 560px;
+}
+.social-columns b{
     font-size: 36px;
     line-height: 36px;
     font-weight: 700;
 }
-.social p{
+.social-columns p{
     font-size: 16px;
     line-height: 22px;
     color:#444444;
@@ -240,16 +359,30 @@ textarea:focus{
 }
 
 /*СТИЛИ ДЛЯ СТРАНИЦЫ CATALOG.html*/
+.inner-page .main-container{
+    display: flex;
+    outline: 1px solid red;
+    justify-content: space-between;
+    padding-top: 60px;
+}
 .content h1{
+
     font-size: 55px;
     line-height: 55px;
     font-weight: 500;
     color: #000000;
+    margin: 0;
+    padding: 75px 0 117px 0;
+    text-align: center;
 
     background-color: #eeeeee;
 }
 
 /*СТИЛИ ДЛЯ ФОРМЫ SORT_FORM*/
+.sort{
+    width: 260px;
+    outline: 1px solid red;
+}
 .sort-form fieldset{
     border: none;
 }
@@ -361,6 +494,10 @@ input[type="checkbox"]:disabled ~ label{
 }
 
 /*СТИЛИ ДЛЯ SECTION: class="catalog" */
+.catalog-columns{
+    width: 760px;
+    outline: 1px solid red;
+}
 .catalog b{
     font-size: 18px;
     line-height: 18px;
@@ -405,7 +542,18 @@ a[class^="sort"]:active img{
 
 /*СТИЛИ ДЛЯ UL: class="catalog-list" */
 .catalog-list{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     list-style:none;
+    margin: 0;
+    padding: 0;
+    outline:1px solid red;
+}
+.catalog-item{
+    width: 360px;
+    outline:1px solid red;
 }
 .catalog-item-info{
     background-color: #eeeeee;

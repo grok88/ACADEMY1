@@ -1,0 +1,31 @@
+ul {
+    font: 14px Verdana,sans-serif;
+    padding: 0;
+}
+ul li {
+    display : inline-block ;
+    width : 100px;
+    border : 1px solid #E76D13;
+    /* эмуляция inline-block для IE6-7*/
+
+    }
+div[class^="wrapper"]{
+    margin-bottom: 10px;
+}
+.wrapper1 li{
+margin-left:-.36em;
+}
+.wrapper1 li:first-child{
+    margin-left: 0;
+}
+.liner{
+    width: 510px;
+    background-color: #00bc6c;
+
+}
+.wrapper2 ul{
+    font-size: 0;
+}
+.wrapper2 li{
+    font-size: 14px;
+}

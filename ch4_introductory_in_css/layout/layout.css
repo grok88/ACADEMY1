@@ -1,0 +1,84 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 450px;
+    height: 335px;
+
+    font-size: 10px;
+    font-family: "Arial", sans-serif;
+    color: white;
+}
+.header .layout-positioner,.header-menu .layout-positioner,.header-promo .layout-column, main .layout-column,footer .layout-positioner{box-sizing:border-box;
+    padding:5px;}
+/*
+  Используемые цвета:
+  #34495e – мокрый асфальт
+  #c0392b – красный
+  #3498db – синий
+*/
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*
+  Используемые цвета:
+  #34495e – мокрый асфальт
+  #c0392b – красный
+  #3498db – синий
+*/
+header{
+    background-color: #34495e;
+    margin-bottom: 10px;
+    padding-top: 10px;
+
+}
+.header .layout-positioner{
+    background-color: #c0392b;
+    height: 35px;
+    margin-bottom: 10px;
+}
+.header-menu{
+    background-color: #3498db;
+    height: 35px;
+}
+
+.header-promo .layout-column{
+    float: left;
+    background-color: #c0392b;
+    width: 170px;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.header-promo .layout-column:first-child{
+    margin-right: 10px;
+}
+.layout-positioner{
+    width:350px;
+    margin:0 auto;
+
+}
+main .layout-column{
+    width: 70px;
+    float: left;
+    background-color: #3498db;
+    height:100px;
+
+    margin-right: 10px;
+}
+.layout-column.main{
+    width: 190px;
+}
+.layout-positioner .layout-column:last-child{
+    margin-right: 0;
+}
+footer{
+    background-color: #34495e;
+    margin-top: 10px;
+    height: 40px;
+}

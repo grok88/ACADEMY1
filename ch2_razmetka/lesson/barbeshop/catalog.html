@@ -10,9 +10,9 @@
 <body class="inner-page">
 <!-- HEADER -->
 <header class="main-header">
-	<nav class="main-nav">
+	<nav class="main-nav container">
 		<a class="main-header-logo" href="Index.html">
-			<img src="img/logo.svg" alt="Логотип Барбешопа" >
+			<img src="img/logo.svg" alt="Логотип Барбешопа" width="111" height="24">
 		</a>
 		<ul class="site-navigation">
 			<li><a href="info.html">Информация</a></li>
@@ -29,14 +29,15 @@
 	</nav>
 </header>
 <!-- MAIN -->
-	<main class="content">
-		<h1>Средства для ухода</h1>
+	<main class="content container">
+		<h1 class="page-title">Средства для ухода</h1>
 		<ul class="breadcrumbs">
 			<li><a href="Index.html">Главная</a></li>
 			<li><a href="catalog.html">Магазин</a></li>
 			<li class="breadcrumbs-current">Средства для ухода</li>
 		</ul>
-		<section class="filters">
+		<div class="catalog-columns">
+			<section class="filters">
 			<h2 class="visually-hidden">Фильтр товаров</h2>
 
 			<form action="https://echo.htmlacademy.ru" method="post" class="filters-form">
@@ -113,12 +114,11 @@
 			</form>
 
 		</section>
-
-		<section class="catalog">
+			<section class="catalog">
 			<h2 class="visually-hidden">Список средств для ухода</h2>
 			<ul class="catalog-list">
 				<li class="catalog-item">
-					<a href="catalog-item.html" target="_blank">
+					<a href="catalog-item.html">
 						<h3>
 							<span class="catalog-category">Набор для путешествий</span>
 							<span class="catalog-firm">«Baxter of California»</span>
@@ -228,28 +228,31 @@
 				<li><a class="pagination-item" href="#">4</a></li>
 			</ul>
 		</section>
+		</div>
 	</main>
 
 <!-- FOOTER -->
 	<footer class="main-footer">
-		<p class="footer-contacts">
-			Барбешоп-бородинский <br>
-			Адрес:г.Санкт-Петербург,б.Конюшенная, д.19/8 <br>
-			<a href="#" title="Инфо о нас">Как нас найти</a> <br>
-			Телефон:+7(495) 666-02-66
-		</p>
-		<div class="social">
-			<b>Давайте дружить</b>
-			<ul class="social-list">
-				<li class="social-item"><a class="social-button" href="#">Вконтакте</a></li>
-				<li class="social-item"><a class="social-button" href="#">Фейсбук</a></li>
-				<li class="social-item"><a class="social-button" href="#">Инстаграм</a></li>
-			</ul>
+		<div class="container">
+			<p class="footer-contacts">
+				Барбешоп-бородинский <br>
+				Адрес:г.Санкт-Петербург,б.Конюшенная, д.19/8 <br>
+				<a href="#" title="Инфо о нас">Как нас найти</a> <br>
+				Телефон:+7(495) 666-02-66
+			</p>
+			<div class="social">
+				<b>Давайте дружить</b>
+				<ul class="social-list">
+					<li class="social-item"><a class="social-button" href="#">Вконтакте</a></li>
+					<li class="social-item"><a class="social-button" href="#">Фейсбук</a></li>
+					<li class="social-item"><a class="social-button" href="#">Инстаграм</a></li>
+				</ul>
+			</div>
+			<p class="footer-copyright">
+				<b>Разработано</b>
+				<a href="http://htmlacademy.ru" class="button"> HTML Academy</a>
+			</p>
 		</div>
-		<p class="footer-copyright">
-			<b>Разработано</b>
-			<a href="http://htmlacademy.ru" class="button"> HTML Academy</a>
-		</p>
 	</footer>
 
 

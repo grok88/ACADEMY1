@@ -1,0 +1,234 @@
+body {
+    position: absolute;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: "Arial", sans-serif;
+}
+.main-menu{
+    list-style: none;
+    width: 150px;
+    padding: 0;
+    margin: 0;
+}
+.main-menu li{
+}
+.main-menu a{
+    color:#0088cc;
+    display: block;
+    padding: 8px 14px;
+    border:1px solid #e5e5e5;
+    margin-bottom:-1px;
+    text-decoration:none;
+}
+.main-menu .active a{
+    color: #ffffff;
+    background-color: #0088cc;
+}
+.main-menu a:hover{
+    background-color: #f5f5f5;
+}
+/*----- menu1-----*/
+.main-menu1{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline:1px solid red;
+}
+.main-menu1 a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2980b9;
+    border-bottom:2px solid #2c3e50;
+
+}
+.main-menu1 .active a{
+    background-color: #1abc9c;
+    border-bottom:2px solid #2ecc71;
+}
+/*-----   многоуровневое menu2-----*/
+
+.main-menu2 {
+    width: 180px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-menu2 > li{
+    margin-bottom: -1px;
+    border: 1px solid #e5e5e5;
+}
+
+.main-menu2 a {
+    display: block;
+    padding: 8px 14px;
+    color: #0088cc;
+    text-decoration: none;
+
+}
+
+.main-menu2 a:hover {
+    background-color: #f5f5f5;
+}
+
+.main-menu2 >  .active > a {
+    color: white;
+    background-color: #0088cc;
+}
+.main-menu2 ul {
+    list-style: none;
+    color:red;
+    margin: 0;
+    padding:5px 0  5px 30px;
+}
+.main-menu2 li li a{
+    color: #000000;
+    padding: 3px 0;
+}
+.main-menu2 li li a:hover{
+    background:none;
+
+    text-decoration: underline;
+}
+
+/*-----   многоуровневое menu3-----*/
+.main-menu3 *{
+    box-sizing: border-box;
+}
+.main-menu3{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-menu3 > li{
+    background-color: #2980b9;
+    border-bottom:2px solid #2c3e50;
+}
+.main-menu3 .active{
+    background-color: #1abc9c;
+}
+.main-menu3 a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+}
+.main-menu3 ul{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    border-top: 2px solid #2c3e50;
+}
+.main-menu3 ul li{
+    background: #ffffff;
+}
+.main-menu3 ul li a{
+    color:#2980b9;
+    text-decoration: underline;
+}
+
+/*-----  menu4-----*/
+.main-menu4{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-menu4 li{
+    display: inline-block;
+    background-color: #2980b9;
+    margin-right: -4px;
+    border-left:2px solid #2c3e50;
+}
+
+.main-menu4 a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+.main-menu4 .active{
+    background-color: #1abc9c;
+}
+/*-----  выпадающее menu5-----*/
+.main-menu5 {
+    width: 180px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-menu5 a {
+    display: block;
+    margin-bottom: -1px;
+    padding: 8px 14px;
+    color: #0088cc;
+    text-decoration: none;
+    border: 1px solid #e5e5e5;
+}
+
+.main-menu5 a:hover {
+    background-color: #f5f5f5;
+}
+
+.main-menu5 > li {
+    position:relative;
+}
+
+/* Подменю */
+
+.main-menu5 .sub-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #fcf8e3;
+    position:absolute;
+    top:5px;
+    left:170px;
+    z-index:10;
+    width:150px;
+    display:none;
+}
+.main-menu5 > li:hover .sub-menu{
+    display: block;
+}
+/* Подменю    Итоговое*/
+/*
+#ffffff
+#2980b9
+#2c3e50
+#1abc9c
+#2ecc71
+*/
+.main-menu6{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-menu6 a{
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.main-menu6 > li{
+    background-color: #2980b9;
+    border-bottom:2px solid #2c3e50;
+    position: relative;
+}
+.main-menu6 .open {
+    background-color: #1abc9c;
+}
+.main-menu6 .sub-menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right:-90px;
+    z-index: 10;
+}
+.main-menu6 .sub-menu > li{
+    border-bottom:2px solid #2ecc71;
+    background-color: #1abc9c;
+}

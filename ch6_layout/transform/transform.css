@@ -1,0 +1,17 @@
+.block{
+    width: 300px;
+    margin: auto;
+
+}
+
+.block1 {
+    border-left:40px solid aquamarine;
+    position: relative;
+}
+.block1 h1{
+    position: absolute;
+    left: 0;
+    top: 10px;
+    transform-origin:  0 0;
+    transform: rotate(90deg);
+}

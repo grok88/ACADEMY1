@@ -14,6 +14,7 @@
 
 /* Задаем общие стили для страницы */
 body{
+    min-width: 960px;
     margin: 0;
     padding: 0;
 
@@ -30,8 +31,16 @@ body{
 a{
     text-decoration: none;
 }
+img{
+    max-width: 100%;
+    height: auto;
+}
 .button{
+    width: 140px;
+    box-sizing: border-box;
+    display: inline-block;
     font:inherit;
+    padding: 10px 0;
 
     color: #ffffff;
     text-transform: uppercase;
@@ -40,13 +49,17 @@ a{
 
     border:none;
 }
-.visually-hidden{
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
     position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
     border: 0;
     padding: 0;
+    white-space:nowrap;
+    clip-path:inset(100%);
     clip:rect(0,0,0,0);
     overflow: hidden;
 }
@@ -80,18 +93,39 @@ a{
 .inner-page .user-navigation{
     margin-left: auto;
 }
+/*  main */
 .page-title{
     font-size: 30px;
     line-height: 42px;
     margin-bottom: 15px;
 }
 .breadcrumbs{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     list-style:none;
-    margin: 0;
+    margin: 0 0 50px;
     padding: 0;
 }
 .breadcrumbs a{
     color:#000000;
+
+}
+.breadcrumbs li:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    right: -24px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    transform:rotate(45deg);
+}
+.breadcrumbs li{
+    margin-right: 40px;
+    position: relative;
+    outline:1px solid red;
 }
 .breadcrumbs a:hover,
 .breadcrumbs a:focus{
@@ -100,6 +134,7 @@ a{
 .breadcrumbs-current{
     color:#aba9a7;
 }
+/*  filters */
 .catalog-columns{
     display: flex;
     justify-content: space-between;
@@ -109,25 +144,44 @@ a{
     outline: 1px solid red;
 }
 .filters-form fieldset{
+    margin: 0 0 25px;
+    padding: 0;
     border:none;
+}
+.filters-form fieldset:first-child{
+    margin-bottom: 35px;
 }
 .filters-form legend{
     font-size: 24px;
-    left: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
 }
-.filters-form p{
+.filters-form .filter-input,
+.filters-form .filter-input{
     line-height: 18px;
+    margin: 0 0 17px;
+    padding: 0 0 0 44px;
+    outline:1px solid red;
+    position: relative;
+
+}
+.filters-form label{
+    cursor: pointer;
+    user-select: none;
+    display: block;
 }
 /*
-
-
-*/
 .filters-form input[type="radio"],
 .filters-form input[type="checkbox"] {
     display: none;
 }
+*/
 /*ДЛЯ РАДИО*/
+/*
 .filters-form input[type="radio"] + span{
+    position: absolute;
+    left: 0;
+    top: -1px;
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -138,13 +192,73 @@ a{
 .filters-form input[type="radio"]:checked + span{
     background:url("../img/radio-on.png") left top;
 }
-
-.filter-input:hover ~ label,
-.filter-input:focus ~ label{
+*/
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:focus + label,
+.filter-input-radio:hover + label,
+.filter-input-radio:focus + label{
     color:#663d15;
 }
+
+
+.filter-input-radio + label::before{
+    content:"";
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border:2px solid #000000;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+}
+.filter-input-radio:checked + label::after{
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    border-radius:50% ;
+}
+
 /*ДЛЯ чекбокса*/
+/*   Используем 2 метод  */
+
+
+.filter-input-checkbox + label::before{
+    content:"";
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border:2px solid #000000;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+.filter-input-checkbox:checked + label::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left:3px;
+    top:3px;
+    background:url("../img/cross.svg") no-repeat 50% 50%;
+}
+.filter-input-checkbox:disabled ~ label,
+.filter-input-checkbox:disabled + span{
+    color: #000000;
+
+    opacity: .5;
+}
+
+/* ПЕРВЫЙ МЕТОД  !!! В НАДО СПАНЫ РАСКАМЕНТИТЬ*/
+/*
 .filters-form input[type="checkbox"]+ span{
+    position: absolute;
+    left: 0;
+    top: -1px;
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -163,6 +277,7 @@ a{
 
     opacity: .5;
 }
+*/
 .catalog{
     width: 700px;
     outline: 1px solid red;
@@ -176,6 +291,7 @@ a{
     margin-bottom: 45px;
 }
 .catalog-item{
+
     background-color: #f8f8f8;
     box-shadow:0 0 10px rgba(0,0,0,.1);
     width: 220px;
@@ -183,6 +299,8 @@ a{
     margin-right: 20px;
     outline: 1px solid red;
 }
+
+
 .catalog-item:nth-child(3n){
     margin-right: 0;
 }
@@ -191,15 +309,34 @@ a{
 }
 .catalog-item a {
     color: #000000;
+    display: flex;
+    flex-direction: column;
 }
 .catalog-item h3 {
     font-size: 14px;
     line-height: 18px;
+    order: 1;
+    margin:16px 17px 16px 12px;
 }
+
 .catalog-category{
     text-transform: none;
+    display: block;
+}
+.catalog-item-image{
+    margin: 0;
+    width: 220px;
+    height: 165px;
+}
+.catalog-item-price{
+    display: flex;
+    margin:0 15px 15px;
+
 }
 .catalog-item-price b{
+    box-sizing: border-box;
+    width: 109px;
+    padding:13px 25px 11px;
     font-size: 14px;
     line-height: 18px;
     text-align: center;
@@ -207,6 +344,9 @@ a{
     background-color: #e5e5e5;
 }
 .catalog-item-price .button{
+    width: 78px;
+    padding: 13px 18px 11px;
+    margin-right: 0;
     color: #ffffff;
     font-size: 14px;
     line-height: 18px;
@@ -215,7 +355,15 @@ a{
     list-style:none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 
+}
+.pagination-list li{
+    margin: 0;
+}
+.pagination-list li:not(:last-child){
+    margin-right: 7px;
 }
 .pagination-item{
     color:#ffffff;
@@ -223,26 +371,37 @@ a{
     
     background-color: #000000;
 }
+.pagination-list a{
+    display: block;
+    padding: 15px 18px;
+
+}
 .pagination-item a:hover,
 .pagination-item a:focus,
 .pagination-item a:active{
     background-color: #663d15;
 }
-.pagination-item-current a{
-    color: #000000;
+.pagination-item-current {
+    line-height: 18px;
 
+    display: block;
+    padding: 15px 18px;
+    color: #000000;
     background-color: #ffffff;
 }
 .inner-page .main-footer{
     margin-top: 45px;
 }
-.current a:focus,
-.current a:hover,
-.current a:active{
-    color: #000000;
 
-    background-color: #ffffff;
+
+.pagination-list a:not(.pagination-item-current):focus,
+.pagination-list a:not(.pagination-item-current):hover,
+.pagination-list a:not(.pagination-item-current):active{
+    color: #ffffff;
+
+    background-color: #663d15;
 }
+
 /* Задаем  стили для Header */
 .main-nav{
     font-size: 16px;
@@ -270,19 +429,41 @@ a{
     outline:1px solid red;
 }
 .site-navigation{
-    width:540px;
+    display: flex;
+    flex-wrap: wrap;
+    width:620px;
     margin: 0;
     padding: 0;
 
 }
 .user-navigation{
-    width: 140px;
     margin: 0;
     padding: 0;
+    position: relative;
+}
+.login-link::before{
+    content: '';
+    position: absolute;
+    top: 27px;
+    left: 24px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/korzina.svg) no-repeat 0 0;
+    opacity: .3;
+}
+.login-link:hover::before,
+.login-link:active::before,
+.login-link:focus::before{
+    opacity: 1;
 }
 .site-navigation a,
 .user-navigation a{
+    display: block;
+    padding:25px 20px;
     color:#ffffff;
+}
+.user-navigation .login-link{
+    padding-left: 50px;
 }
 .main-navigation-wrapper{
     width: 100%;
@@ -299,8 +480,6 @@ a{
     width: 940px;
     padding:0 10px;
     margin: auto;
-
-
     outline:1px solid red;
 }
 .site-navigation a:hover,
@@ -328,22 +507,42 @@ a{
     outline:1px solid red;
 }
 .features-item h3{
+    position: relative;
+    margin: 0;
+    margin-bottom: 60px;
     font-size: 30px;
     line-height: 42px;
+    outline:1px solid red;
 }
-
+.features-item h3::before{
+    content:"";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: -30px;
+    left: calc(50% - 10px);
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+.features-item p{
+    padding: 0 10px;
+}
 /* Задаем  стили для section News and Gallery */
 .index-columns{
     display: flex;
     justify-content: space-between;
     color:#000000;
-
-    background:#f8f5f2 url("../img/section-fon.jpg") 0 0 ;
+    background-color: #f8f5f2;
+    background-image:   url("../img/vertical-line.png"),
+                        url("../img/section-fon.jpg");
+    background-repeat: no-repeat,repeat;
+    background-position:  center,0 0;
     padding:50px 80px;
     margin-bottom: 35px;
     outline:1px solid red;
 }
 .index-columns h2{
+    margin: 0 0 25px;
     font-size: 30px;
     left: 42px;
 }
@@ -351,20 +550,81 @@ a{
     width: 380px;
     outline:1px solid red;
 }
+.news-item p{
+    margin: auto;
+    padding-right: 10px;
+}
 .gallery,.appointment{
     width: 300px;
     outline:1px solid red;
+    position: relative;
 }
 .news-list{
     list-style:none;
+    margin: 0 0 25px;
+    padding: 0;
 }
 .news-list time{
     text-transform: none;
+
 }
+.news-item{
+    margin-bottom: 30px;
+}
+.gallery-content{
+    height: 164px;
+    margin: 0;
+    border:7px solid #fff;
+}
+
+
+ .gallery-button{
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.gallery-button-back{
+    left: 0;
+}
+.gallery-button-next{
+    right: 0;
+}
+
 /* Задаем  стили для section Contacts and Appointment */
+
+.contacts p{
+    margin: 0 0 25px;
+}
+.contacts .button{
+    margin-right: 16px;
+}
+.appointment-info{
+    margin: 0 0 15px;
+}
+.appointment-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.appointment-item{
+    outline: 1px solid red;
+    width: 140px;
+    margin: 0 0 15px;
+}
+.appointment-form .button{
+    width: 100%;
+    margin-top: 10px;
+}
+.appointment-item label{
+    display: block;
+    margin: 0 0 9px 15px;
+}
 .appointment-item input{
     font: inherit;
-
+    box-sizing: border-box;
+    width: 100%;
+    padding:8px 15px 7px;
     background-color: transparent;
     border:2px solid #000101;
 }
@@ -385,8 +645,8 @@ a{
 .footer-contacts{
     width: 320px;
     outline:1px solid red;
-    margin: 0;
-    margin-right: 80px;
+    margin: 0 80px 0 0;
+
 }
 .footer-contacts a{
     color: #ffffff;
@@ -397,22 +657,51 @@ a{
     text-decoration: none;
 }
 .social{
-    width: 145px;
+    width: 140px;
     text-align: center;
     margin: 0;
     outline:1px solid red;
 }
 .social-list{
     list-style:none;
+    display: flex;
+    width: 140px;
+    margin: 15px 0 0;
+    padding: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .social-item a{
     color: #ffffff;
+    outline:1px solid red;
+}
+.social-button{
+    width: 43px;
+    height: 43px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-button:hover,
+.social-button:focus{
+    background-color: #fff;
+}
+
+.social-button:hover path,
+.social-button:focus path{
+    fill: #000000;
 }
 .footer-copyright{
-    width: 150px;
+    width: 140px;
     outline:1px solid red;
     margin: 0;
     margin-left: auto;
+}
+.footer-copyright b{
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
 }
 .footer-copyright .button:hover,
 .footer-copyright .button:focus{
@@ -462,18 +751,49 @@ a{
 }
 .product-photos-preview{
     list-style: none;
+    margin: 21px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .product-photo-full{
+    width: 460px;
+    height: 498px;
     box-shadow: 0 0 10px 2px rgba(0,0,0,.5);
 }
 .product-photos-preview li{
     box-shadow: 0 0 10px 2px rgba(0,0,0,.5);
 }
+.product-info p{
+    margin: 0;
+    padding-right: 10px;
+}
+.product-info-header{
+     display: flex;
+     justify-content: space-between;
+     margin-top: 26px;
+     margin-bottom: 35px;
+
+ }
 .product-article{
     color:#aeaeae;
     text-align: right;
 }
+
+p.product-price{
+    margin-top: 40px;
+    margin-bottom: 63px;
+    display: flex;
+}
+.post-text{
+    font-size: 14px;
+    line-height: 24px;
+}
 .product-price b{
+    width: 109px;
+    box-sizing: border-box;
+    padding:13px 36px 11px 33px;
     color: #000000;
     font-size: 14px;
     line-height: 24px;
@@ -481,15 +801,41 @@ a{
 
     background-color: #e5e5e5;
 }
+.product-price .button{
+    width: 78px;
+    box-sizing: border-box;
+    padding-left: 17px;
+    padding-right: 17px;
+}
 .product-info{
     width: 390px;
 }
 .product-info h3{
     font-size: 24px;
     line-height: 30px;
+    margin: 0 0 25px;
 }
-.product-info ul{
+.product-list-info{
     list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.product-list-info li{
+    position: relative;
+    margin-left: 21px;
+
+}
+.product-list-info li::before{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    position: absolute;
+    left: -21px;
+    top: 8px;
+    transform: rotate(45deg);
 }
 
 
@@ -500,6 +846,27 @@ a{
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+    display: block;
+    position: relative;
+    margin: 0 0 57px;
+}
+.about-us b::before{
+    content: "";
+    width: 160px;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    left: 0;
+    top: 23px;
+}
+.about-us b::after{
+    content: "";
+    width: 160px;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    right: 0;
+    top: 23px;
 }
 .about-us h2{
     font-size: 24px;
@@ -512,10 +879,60 @@ a{
     width: 300px;
     outline: 1px solid red;
 }
+.catalog-columns h2{
+    margin: 0 0 35px;
+}
 .about-us-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.about-us-list li{
+    position: relative;
+    margin-left: 21px;
+    margin-bottom: 17px;
+}
+.about-us-list li:last-child{
+    margin-bottom: 0;
+}
+.about-us-list li::before{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    position: absolute;
+    left: -21px;
+    top: 8px;
+    transform: rotate(45deg);
 }
 .masters-price{
     width: 460px;
     outline: 1px solid red;
+}
+.price-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.price-table td{
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    width: 230px;
+    padding:10px 0 10px 16px;
+}
+.price-table td:last-child{
+    text-align: center;
+}
+.about-us-info h2{
+    margin: 57px 0 22px ;
+}
+.about-us-info p{
+    font-size: 12px;
+    line-height:20px;
+    margin: 0;
+    width: 316px;
+    display: inline-block;
+}
+p.about-us-left{
+    margin-right: 165px;
 }

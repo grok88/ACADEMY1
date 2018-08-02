@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+    font-family: "PT Sans", sans-serif;
+}
+
+.share {
+    width: 270px;
+    margin: 0 auto;
+    margin-top: 120px;
+    padding: 10px;
+    padding-left: 20px;
+
+    background-color: #ecf0f1;
+}
+
+.share b {
+    margin-right: 15px;
+
+    font-weight: normal;
+    color: #7f8c8d;
+    text-transform: uppercase;
+}
+.social{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #bdc3c7;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+/* PAGINATION */
+.paginator {
+    width: 280px;
+    margin: 30px auto;
+    padding: 10px;
+
+    white-space: nowrap;
+
+    background-color: #ecf0f1;
+}
+
+.paginator a,
+.paginator span {
+    display: inline-block;
+    height: 40px;
+    min-width: 20px;
+    padding: 0 10px;
+    background-color: #95a5a6;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+}
+.next,.prev{
+    font-size: 40px;
+
+}
+.prev{
+    margin-right: 20px;
+}
+.next{
+    margin-left: 20px;
+}
+.paginator .current{
+    background-color: #16a085;
+}
+.disabled{
+    opacity: .3;
+}
+.paginator a:hover{
+    background-color: #2ecc71;
+}
+
+/* CARD  */
+.exam {
+    width: 280px;
+    min-height: 280px;
+    padding-top: 20px;
+    padding-left: 20px;
+
+    font-size: 14px;
+    line-height: 1.2;
+    font-family: "Arial", sans-serif;
+
+    background-color: #ecf0f1;
+}
+.card{
+    background-color: #1abc9c;
+    color: #ffffff;
+    padding: 20px;
+}
+.card h2{
+    margin: 0;
+    font-weight: normal;
+}
+.card .social{
+    display: inline-block;
+    padding: 10px;
+    outline:1px solid red;
+    background: #16a085 url("social-challenge.png") no-repeat;
+}
+/*  final CARD  */
+.exam2 {
+    width: 280px;
+    min-height: 250px;
+    padding-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    font-size: 12px;
+    line-height: 1.2;
+    font-family: "Arial", sans-serif;
+    color: #7f8c8d;
+
+    background-color: #ecf0f1;
+}
+.post{
+    position: relative;
+    padding-left: 60px;
+}
+.post-title,
+.post-author a,
+.post-stats a{
+    color:#2980b9;
+}
+.post-title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.post a{
+    text-decoration: none;
+    font-size: 15px;
+}
+.post-date{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border-bottom: 5px solid #bdc3c7 ;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.post-stats{
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.post-stats .icon {
+    width: 15px;
+    height: 15px;
+
+}
+.post-stats .icon-tags{
+    background: url("post-challenge.png") no-repeat 0 0;
+}
+.post-stats .icon-comments{
+    background: url("post-challenge.png") no-repeat -30px 0;
+}
+.post-text{
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 5px solid #bdc3c7 ;
+    font-size: 15px;
+}
+.post-type{
+    width: 30px;
+    height: 30px;
+    background: #7f8c8d url("quotes.png") no-repeat center center;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    border-bottom: 5px solid #bdc3c7 ;
+}
+/*
+Все размеры, отступы, координаты, размеры шрифтов (не заданные в body) кратны 5 или 10.
+Адреса картинок:
+quotes.png
+post-challenge.png
+Картинка «кавычки» выровнена по центру
+#ffffff
+#7f8c8d
+#2980b9
+#bdc3c7
+*/

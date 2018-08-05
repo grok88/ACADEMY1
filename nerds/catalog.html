@@ -33,31 +33,33 @@
 				<!-- ТУт будет форма  -->
 				<fieldset class="form-price">
 					<legend>Стоимость:</legend>
-					<input type="range" nim="0" max="15000" name="price">
-					<p>
-						<label for="min-price">От</label>
-						<input type="text" id="min-price" name="min-price" placeholder="0">
-					</p>
-					<p>
-						<label for="max-price">До</label>
-						<input type="text" id="max-price" name="max-price" placeholder="15000">
-					</p>
+					<div class="range-filter">
+						<div class="range-controls">
+							<div class="scale">
+								<div class="bar"></div>
+							</div>
+							<div class="toggle toggle-min"></div>
+							<div class="toggle toggle-max"></div>
+						</div>
+						<div class="price-controls">
+							<label class="min-price">От<input type="text" name="min-price" value="0"></label>
+							<label class="max-price">До<input type="text" name="max-price" value="15 000"></label>
+						</div>
+					</div>
 				</fieldset>
+
 				<fieldset class="form-grid">
 					<legend>Сетка:</legend>
 					<p>
 						<input type="radio" name="grid-sort" id="grid-ad" class="visually-hidden" checked>
-						<span></span>
 						<label for="grid-ad">Адаптивная</label>
 					</p>
 					<p>
 						<input type="radio" name="grid-sort" id="grid-fix" class="visually-hidden">
-						<span></span>
 						<label for="grid-fix">Фиксированная</label>
 					</p>
 					<p>
 						<input type="radio" name="grid-sort" id="grid-rez" class="visually-hidden">
-						<span></span>
 						<label for="grid-rez">Резиновая</label>
 					</p>
 				</fieldset>
@@ -96,70 +98,78 @@
 		<div class="catalog-columns">
 			<section class="catalog">
 				<h2 class="visually-hidden">Каталог готовых шаблонов</h2>
-				<b>Сортировать</b>
-				<ul class="catalog-sort">
-					<li><a class="catalog-sort-button current" title="цена" href="#">По цене</a></li>
-					<li><a class="catalog-sort-button" title="тип" href="#">По типу</a></li>
-					<li><a class="catalog-sort-button" title="название" href="#">По названию</a></li>
-				</ul>
-				<ul class="catalog-order">
-					<li><a href="#" title="Сортировка по убыванию" class="sort-down"><img src="img/icon-down-dir.svg" alt="Сортировка по убыванию"></a></li>
-					<li><a href="#" title="Сортировка по возрастанию" class="sort-up"><img src="img/icon-up-dir.svg" alt="Сортировка по возрастанию"></a></li>
-				</ul>
+				<b>Сортировать:</b>
+				<div class="catalog-wrapper">
+					<ul class="catalog-sort">
+						<li><a class="catalog-sort-button current" title="цена" href="#">По цене</a></li>
+						<li><a class="catalog-sort-button" title="тип" href="#">По типу</a></li>
+						<li><a class="catalog-sort-button" title="название" href="#">По названию</a></li>
+					</ul>
+					<ul class="catalog-order">
+						<li><a href="#" title="Сортировка по убыванию" class="sort-down current"><img src="img/icon-down-dir.svg" alt="Сортировка по убыванию"></a></li>
+						<li><a href="#" title="Сортировка по возрастанию" class="sort-up"><img src="img/icon-up-dir.svg" alt="Сортировка по возрастанию"></a></li>
+					</ul>
+				</div>
 			</section>
 			<ul class="catalog-list">
 				<li class="catalog-item">
 					<img src="img/browser.png" alt="Шапка макета" height="40" width="360">
-					<img src="img/img-sedona.jpg" alt="Шаблон Sedona" width="360" height="576">
+					<img src="img/browser.svg" alt="Шапка макета" height="40" width="360" class="svg">
+					<img src="img/img-sedona.jpg" alt="Шаблон Sedona" width="360" height="576" >
 					<div class="catalog-item-info">
 						<h3><a href="#"  class="catalog-list-link">Sedona</a></h3>
-						<p>Информационный сайт для туристов</p>
+						<p>Информационный  сайт <br> для туристов</p>
 						<a href="#" class="button catalog-list-button" title="#">9 900 руб</a>
 					</div>
 				</li>
 				<li class="catalog-item">
-					<img src="img/browser.svg" alt="Шапка макета" height="40" width="360">
+					<img src="img/browser.png" alt="Шапка макета" height="40" width="360">
+					<img src="img/browser.svg" alt="Шапка макета" height="40" width="360" class="svg">
 					<img src="img/img-pink.jpg" alt="Шаблон Pink" width="360" height="576">
 					<div class="catalog-item-info">
 						<h3><a href="#" class="catalog-list-link">Pink app</a></h3>
-						<p>Продуктовый лендинг приложения для IOS и Android</p>
+						<p>Продуктовый лендинг <br> приложения для IOS и Android</p>
 						<a href="#" class="button  catalog-list-button" title="#">9 900 руб</a>
 					</div>
 				</li>
 				<li class="catalog-item">
 					<img src="img/browser.png" alt="Шапка макета" height="40" width="360">
+					<img src="img/browser.svg" alt="Шапка макета" height="40" width="360" class="svg">
 					<img src="img/img-barbershop.jpg" alt="Шаблон Barbershop" width="360" height="576">
 					<div class="catalog-item-info">
 						<h3><a href="#" class="catalog-list-link">Barbershop</a></h3>
-						<p>Сайт салона красоты.Для мужщины,да</p>
+						<p>Сайт салона красоты. <br> Для мужщины,да</p>
 						<a href="#" class="button catalog-list-button" title="#">9 900 руб</a>
 					</div>
 				</li>
 				<li class="catalog-item">
 					<img src="img/browser.png" alt="Шапка макета" height="40" width="360">
+					<img src="img/browser.svg" alt="Шапка макета" height="40" width="360" class="svg">
 					<img src="img/img-mishka.jpg" alt="Шаблон Mishka" width="360" height="576">
 					<div class="catalog-item-info">
 						<h3><a href="#" class="catalog-list-link">Mishka</a></h3>
-						<p>Интернет-магазин вязаных игрушек
+						<p>Интернет-магазин  <br> вязаных игрушек
 						</p>
 						<a href="#" class="button catalog-list-button" title="#">9 900 руб</a>
 					</div>
 				</li>
 				<li class="catalog-item">
 					<img src="img/browser.png" alt="Шапка макета" height="40" width="360">
-					<img src="img/img-aplus.jpg" alt="Шаблон plus" width="360" height="576">
+					<img src="img/browser.svg" alt="Шапка макета" height="40" width="360" class="svg">
+					<img src="img/img-aplus.jpg" alt="Шаблон plus" width="360" height="576" >
 					<div class="catalog-item-info">
 						<h3><a href="#" class="catalog-list-link">plus</a></h3>
-						<p>Лендинг курсов повышения квалификации</p>
+						<p>Лендинг курсов повышения <br> квалификации</p>
 						<a href="#" class="button  catalog-list-button" title="#">9 900 руб</a>
 					</div>
 				</li>
 				<li class="catalog-item">
 					<img src="img/browser.png" alt="Шапка макета" height="40" width="360">
+					<img src="img/browser.svg" alt="Шапка макета" height="40" width="360" class="svg">
 					<img src="img/img-kvast.jpg" alt="Шаблон Kbact" width="360" height="576">
 					<div class="catalog-item-info">
 						<h3><a href="#" class="catalog-list-link">Kbact</a></h3>
-						<p>Промо сайт производителя крафтового кваса</p>
+						<p>Промо сайт производителя <br> крафтового кваса</p>
 						<a href="#" class="button catalog-list-button" title="#">9 900 руб</a>
 					</div>
 				</li>
@@ -168,7 +178,7 @@
 				<li class="pagination-item "><a href="#" class="pagination-current">1</a></li>
 				<li class="pagination-item"><a href="#">2</a></li>
 				<li class="pagination-item"><a href="#">3</a></li>
-				<li class="pagination-item"><a href="#">Следущая</a></li>
+				<li class="pagination-item"><a href="#" class="next">Следущая</a></li>
 			</ul>
 		</div>
 	</div>
